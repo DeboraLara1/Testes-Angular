@@ -18,4 +18,30 @@
         <img [src]=" urlImagem ">
 
     </article>
+
+    <article>
+        <h3>Class e Style Binding </h3>
+        <div>Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-primary">Info</option>
+                <option value="alert-dark">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br>
+            <div class="alert" role="role" [class.alert-success]="classe.value == 'alert-success'">
+                Sucesso
+            </div>
+            <div class="alert" role="role" [class.alert-primary]="classe.value == 'alert-primary'">
+                Info
+            </div>
+            <div class="alert" role="role" [class.alert-dark]="classe.value == 'alert-dark'">
+                Alerta
+            </div>
+            <div class="alert" role="role" [class.alert-danger]="classe.value == 'alert-danger'">
+                Erro
+            </div>
+
+        </div>
+    </article>
 </section>
