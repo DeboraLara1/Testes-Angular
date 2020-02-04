@@ -69,7 +69,7 @@
         </div>
     </article>
 </section>
--->
+
 
 <section class="two-way-binding">
     <article>
@@ -77,11 +77,10 @@
         <div>
             <input type="text" [value]="nome" (input)="nome = $event.target.value" />
 
-            <!--Outras maneiras de escrever o código com boas maneiras:
+            //Outras maneiras de escrever o código com boas maneiras:
             <input type="text" [ngModel]="nome" (ngModelChange)="nome = $event" />
             <input type="text" ([ngModel])="nome"/>
-
-            -->
+            //            
 
             <p>Você digitou: {{ nome }}</p>
         </div>
@@ -94,5 +93,14 @@
         <div>
 
         </div>
+    </article>
+</section>
+
+-->
+
+<section class="input-output-properties">
+    <article>
+        <h3>input/output properties</h3>
+        <app-curso [nome]="nomeDoCurso"></app-curso>
     </article>
 </section>
