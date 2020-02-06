@@ -1,0 +1,18 @@
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link  nav-item" [class.active]="aba=='home'" (click)="aba='home'">Home</a>
+    </li>
+    <li class="nav-item nav-item">
+        <a class="nav-link" [class.active]="aba=='Mapa'" (click)="aba='Mapa'">Mapa</a>
+    </li>
+    <li class="nav-item nav-item">
+        <a class="nav-link" [class.active]="aba=='lista'" (click)="aba='lista'">Lista</a>
+    </li>
+</ul>
+
+<div class="container" [ngSwitch]="aba">
+    <p *ngSwitchCase="'Mapa'">Modo mapa ativado </p>
+    <p *ngSwitchCase="'lista'">Modo lista ativado </p>
+    <p *ngsSwitchDefault>Home</p>
+
+</div>
