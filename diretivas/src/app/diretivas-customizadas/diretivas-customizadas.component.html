@@ -1,4 +1,7 @@
-<p FundoAmarelo>Texto com fundo amarelo!</p>
+<p FundoAmarelo>Seja Bem Vindo a nossa página
+    <br>
+    Texto com fundo amarelo!
+</p>
 
 <button FundoAmarelo>Botão com fundo amarelo.</button>
 <br>
@@ -7,9 +10,18 @@
 <p HighlightMouse>
     Texto com Highlight quando passo o mouse.
 </p>
-<br>
+
 
 <p Highlight [defaultColor]="'grey'" [highlightColor]="'red'">
-    Texto com Highlight com cores customizadas
+    Texto com Highlight com cores customizadas</p>
 
-</p>
+<h2>Diretivas Estruturas Customizadas-NgElse</h2>
+
+<div *NgElse="mostrarCursos">
+    Lista de cursos aqui.
+</div>
+<div *NgElse="!mostrarCursos">
+    Não existem cursos para serem listados.
+</div>
+<br>
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
