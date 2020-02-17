@@ -7,6 +7,7 @@ import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.componen
 import { CamelPipePipe } from './exemplos-pipes/camel-pipe.pipe';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { FiltroArrayPipe } from './filtro-array.pipe';
 registerLocaleData(localePt, 'pt');
 /*import { SettingsService } from './settings.service'*/
 
@@ -14,7 +15,8 @@ registerLocaleData(localePt, 'pt');
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
-    CamelPipePipe
+    CamelPipePipe,
+    FiltroArrayPipe
 
   ],
   imports: [
