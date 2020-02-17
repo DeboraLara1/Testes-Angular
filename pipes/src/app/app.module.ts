@@ -4,11 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
+import { CamelPipePipe } from './exemplos-pipes/camel-pipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExemplosPipesComponent
+    ExemplosPipesComponent,
+    CamelPipePipe
+
   ],
   imports: [
     BrowserModule,
