@@ -1,14 +1,14 @@
 <p>exemplos-pipes!</p>
 
-<p>Título: {{livro.titulo | uppercase | lowercase | camelPipe }}</p>
+<p>Título:{{livro.titulo|uppercase|lowercase|camelPipe}}</p>
 <!-- uppercase letra maiuscula; lowercase letra minuscula -->
-<p>Estrelas: {{livro.rating | number:'1.1-1' }}</p>
-<p>Páginas: {{livro.numeroPaginas | number}}</p>
-<p>Preço: {{livro.preco | currency:'BRL':true}}</p>
-<p>Data Lançamento: {{livro.dataLancamento | date:'dd-MM-yyyy'}}</p>
-<p>Url: {{livro.url}}</p>
+<p>Estrelas:{{livro.rating|number:'1.1-1'}}</p>
+<p>Páginas:{{livro.numeroPaginas|number}}</p>
+<p>Preço:{{livro.preco|currency:'BRL':true}}</p>
+<p>Data Lançamento:{{livro.dataLancamento|date:'dd-MM-yyyy'}}</p>
+<p>Url:{{livro.url}}</p>
 <br>
-<p>Livro: {{livro |json}}</p>
+<p>Livro:{{livro|json}}</p>
 
 <input type="text" ngModel="filtro">
 <br><br>
@@ -16,8 +16,25 @@
 <br><br>
 <button (click)="addCurso(novoValor.value)"> ADD novo curso</button>
 
+
+<h3>Pipe Puro</h3>
 <ul>
     <li *ngFor="let liv of livros | filtroArray:filtro">
+        {{liv}}
+    </li>
+</ul>
+
+
+<h3>Pipe Impuro</h3>
+<ul>
+    <li *ngFor="let liv of livros | filtroArrayImpuro:filtro">
+        {{liv}}
+    </li>
+</ul>
+
+<h2>Maneira correta de usar filtro nos projetos</h2>
+<ul>
+    <li *ngFor="let liv of obterCursos()">
         {{liv}}
     </li>
 </ul>

@@ -8,15 +8,17 @@ import { CamelPipePipe } from './exemplos-pipes/camel-pipe.pipe';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { FiltroArrayPipe } from './filtro-array.pipe';
+import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 registerLocaleData(localePt, 'pt');
-/*import { SettingsService } from './settings.service'*/
+import { SettingsService } from './settings.service'
 
 @NgModule({
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
     CamelPipePipe,
-    FiltroArrayPipe
+    FiltroArrayPipe,
+    FiltroArrayImpuroPipe
 
   ],
   imports: [
@@ -29,11 +31,11 @@ registerLocaleData(localePt, 'pt');
       useValue: 'pt'
     },
     /* SettingsService,
-   {
-     provide: LOCALE_ID,
-     deps: [SettingsService],
-     useFactory: (settingsService) => settingsService.getLocale()
-   }*/
+     {
+       provide: LOCALE_ID,
+       deps: [SettingsService],
+       useFactory: (settingsService: any) => settingsService.getLocale()
+     }*/
 
   ],
   bootstrap: [AppComponent]
