@@ -10,6 +10,7 @@ import localePt from '@angular/common/locales/pt';
 import { FiltroArrayPipe } from './filtro-array.pipe';
 import { FiltroArrayImpuroPipe } from './filtro-array-impuro.pipe';
 registerLocaleData(localePt, 'pt');
+import { FormsModule } from '@angular/forms';
 import { SettingsService } from './settings.service'
 
 @NgModule({
@@ -23,7 +24,8 @@ import { SettingsService } from './settings.service'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     {

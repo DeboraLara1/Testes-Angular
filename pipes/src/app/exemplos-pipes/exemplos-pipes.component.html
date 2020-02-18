@@ -10,7 +10,7 @@
 <br>
 <p>Livro:{{livro|json}}</p>
 
-<input type="text" ngModel="filtro">
+<input type="text" [(ngModel)]="filtro" />
 <br><br>
 <input type="text" #novoValor>
 <br><br>
@@ -20,7 +20,7 @@
 <h3>Pipe Puro</h3>
 <ul>
     <li *ngFor="let liv of livros | filtroArray:filtro">
-        {{liv}}
+        {{ liv }}
     </li>
 </ul>
 
